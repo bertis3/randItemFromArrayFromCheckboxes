@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://fb.me/react-15.2.1.js"></script>
+        <script src="https://fb.me/react-dom-15.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+        <title>Building the Note Board</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+            <form method="post" action="">
+              <fieldset>
+                <div>                  
+                  <input type="checkbox" value="aVal[]" id="a" name="myName">
+                  <label for="a">a</label>
+                </div>
+                <div>  
+                  <input type="checkbox" value="bVal[]" id="b" name="myName">
+                  <label for="b">b</label>
+                </div>
+              </fieldset>
+            </form>
+
+            <button type="button" value="myValue" onclick="myFunction()">Select</button>
+
+            <div id="myDiv">
+        
+            </div>
+
+        <script>
+        
+        var aVal = ["123", "abc", "red"];
+        var bVal = ["456", "def", "blue"];
+
+        function myFunction(){
+        var theFix = $(":checked")
+              .map(function() {
+                var rand = $(this).val();                
+                alert(rand);
+                var randPick = rand[[Math.floor(Math.random() * rand.length)]];
+                alert(randPick);
+              })
+        .get()
+        /*.join();*/
+        document.getElementById("myDiv").innerHTML=theFix;
+        };
+        
+        </script>
+
+
+
+
+
+    </body>
+</html>
